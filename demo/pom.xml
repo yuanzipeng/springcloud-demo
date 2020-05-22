@@ -28,6 +28,8 @@
         <beetl.version>2.9.10</beetl.version>
         <log4j.version>1.2.17</log4j.version>
         <antlr.version>4.7.2</antlr.version>
+        <pagehelper.version>1.2.5</pagehelper.version>
+        <tk.mybatis.version>2.0.4</tk.mybatis.version>
     </properties>
 
     <dependencies>
@@ -85,6 +87,20 @@
                 <version>${mybatis.plus.version}</version>
             </dependency>
 
+            <!-- tk.mybatis依赖 start-->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${tk.mybatis.version}</version>
+            </dependency>
+
+            <!--pagehelper分页-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
             <!-- Druid引入 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -118,7 +134,8 @@
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
             </dependency>
-            <!-- mybatis-plus依赖 end-->
+            <!-- tk.mybatis依赖 end-->
+
             <!-- 解决NullUsageProcessor警告-->
             <dependency>
                 <groupId>org.antlr</groupId>
