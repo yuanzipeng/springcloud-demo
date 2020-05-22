@@ -27,5 +27,12 @@ spring:
 logging:
   config: classpath:logback.xml
 
+#解决lombok警告
+config:
+  stopBubbling: true
+lombok:
+  equalsAndHashCode:
+    callSuper: call
+
 
 
