@@ -17,6 +17,7 @@
 
     <modules>
         <module>demo-common</module>
+        <module>demo-user</module>
     </modules>
 
     <properties>
@@ -30,6 +31,8 @@
         <antlr.version>4.7.2</antlr.version>
         <pagehelper.version>1.2.5</pagehelper.version>
         <tk.mybatis.version>2.0.4</tk.mybatis.version>
+        <fastjson.version>1.2.47</fastjson.version>
+        <common.version>0.0.1-SNAPSHOT</common.version>
     </properties>
 
     <dependencies>
@@ -137,10 +140,22 @@
             <!-- tk.mybatis依赖 end-->
 
             <!-- 解决NullUsageProcessor警告-->
-            <dependency>
+           <!-- <dependency>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4</artifactId>
                 <version>${antlr.version}</version>
+            </dependency>-->
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.springcloud.demo</groupId>
+                <artifactId>demo-common</artifactId>
+                <version>${common.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
