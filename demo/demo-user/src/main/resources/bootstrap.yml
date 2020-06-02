@@ -1,0 +1,12 @@
+server:
+    port: 8083
+    servlet:
+        context-path: /user
+    tomcat:
+      uri-encoding: UTF-8
+      basedir: /tmp/tomcat
+      connection-timeout: 60000
+
+spring:
+  application:
+    name: demo-user
