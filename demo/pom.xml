@@ -18,6 +18,7 @@
     <modules>
         <module>demo-common</module>
         <module>demo-user</module>
+        <module>spring-cloud-eureka</module>
     </modules>
 
     <properties>
