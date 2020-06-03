@@ -1,7 +1,7 @@
 server:
-    port: 8083
+    port: 8101
     servlet:
-        context-path: /user
+        context-path: /consumer
     tomcat:
       uri-encoding: UTF-8
       basedir: /tmp/tomcat
@@ -9,9 +9,10 @@ server:
 
 spring:
   application:
-    name: demo-user
+    name: demo-client
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+

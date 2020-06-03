@@ -1,17 +1,15 @@
-package com.springcloud.demo.user;
+package com.springcloud.demo.client;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-
 @EnableDiscoveryClient
-@MapperScan(basePackages = "com.springcloud.demo.user.mapper")
 @SpringBootApplication(scanBasePackages = "com.springcloud.demo")
-public class DemoUserApplication {
+public class DemoClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoUserApplication.class, args);
+        SpringApplication.run(DemoClientApplication.class, args);
     }
+
 }

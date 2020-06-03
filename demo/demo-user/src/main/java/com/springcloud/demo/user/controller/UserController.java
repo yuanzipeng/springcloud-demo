@@ -20,8 +20,8 @@ import java.util.Map;
 public class UserController {
 
     @GetMapping("test")
-    public Result test() {
-        return Result.success();
+    public Result test(String msg) {
+        return Result.success(msg);
     }
 
     @PostMapping("login")
