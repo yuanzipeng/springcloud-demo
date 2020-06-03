@@ -20,7 +20,10 @@ public class JwtProperties {
 
     private String secret = "defaultSecret";
 
-    private Long expiration = 604800L;
+    /**
+     * 默认为24小时，86400秒
+     */
+    private Long expiration = 86400L;
 
     private String authPath = "login";
 

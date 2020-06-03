@@ -8,7 +8,6 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.springcloud.demo.user</groupId>
     <artifactId>demo-user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo-user</name>
