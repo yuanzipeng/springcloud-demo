@@ -77,7 +77,7 @@ public class ConsumerController {
         //feign调用演示
         Result<List<User>> result = useFeign.getUserList();
         List<User> users= result.getData();
-        log.info("getUserList获取用户信息列表"+users);
+        log.info("getUserList获取用户信息列表:{}",users);
         return result;
     }
 
