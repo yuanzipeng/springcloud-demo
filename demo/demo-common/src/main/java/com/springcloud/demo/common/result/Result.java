@@ -1,5 +1,7 @@
 package com.springcloud.demo.common.result;
 
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
@@ -7,7 +9,8 @@ import java.io.Serializable;
  * @Date: 2020-4-24
  * @description 返回结果封装
  */
-public class Result implements Serializable {
+@NoArgsConstructor
+public class Result<T> implements Serializable {
 
     private static final long serialVersionUID = -4774033891136934323L;
 
@@ -87,13 +90,8 @@ public class Result implements Serializable {
         return new Result(Type.ERROR).setMsg(msg).setTime(System.currentTimeMillis());
     }
 
-    public static Result success(String msg) {
-        return new Result(Type.SUCCESS).setMsg(msg).setTime(System.currentTimeMillis());
-    }
-
     public static Result success(Object data) {
-        Type ss = Type.SUCCESS;
-        return new Result(ss).setData(data).setTime(System.currentTimeMillis());
+        return new Result(Type.SUCCESS).setData(data).setTime(System.currentTimeMillis());
     }
 
     public static Result permissionDenied() {

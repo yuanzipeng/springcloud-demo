@@ -3,10 +3,14 @@ package com.springcloud.demo.user.controller;
 import com.springcloud.demo.common.result.Result;
 import com.springcloud.demo.common.utils.JwtTokenUtil;
 import com.springcloud.demo.user.entity.User;
+import com.springcloud.demo.user.mapper.UserMapper;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -19,12 +23,24 @@ import java.util.Map;
 @Api(tags = "用户模块", description = "UserController")
 public class UserController {
 
+    @Resource
+    private UserMapper userMapper;
+
+
     @GetMapping("test")
-    public Result test(String msg) {
+    @ApiOperation(value = "Result测试接口")
+    public Result<String> test(String msg) {
         return Result.success(msg);
     }
 
+    @GetMapping("tests")
+    @ApiOperation(value = "String测试接口")
+    public String tests(String msg) {
+        return msg;
+    }
+
     @PostMapping("login")
+    @ApiOperation(value = "登录接口")
     public Result login(@RequestBody User user) {
 
         JwtTokenUtil jwtTokenUtil = new JwtTokenUtil();
@@ -36,4 +52,19 @@ public class UserController {
         map.put("token", token);
         return Result.success(map);
     }
+
+    @GetMapping("getUserList")
+    @ApiOperation(value = "获取用户信息列表")
+    public Result<User> getUserList() {
+        List<User> user = userMapper.selectList(null);
+        return Result.success(user);
+    }
+
+    @PostMapping("getUser")
+    @ApiOperation(value = "获取用户信息")
+    public Result<User> getUser(@RequestBody User user) {
+        User user1 = userMapper.selectById(user.getUuid());
+        return Result.success(user1);
+    }
+
 }
