@@ -14,6 +14,11 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.Resource;
 import java.util.List;
 
+/**
+ * @Author: yzp
+ * @Date: 2020-6-4 10:59
+ * @description
+ */
 @Slf4j
 @RestController
 @RequestMapping("consumer")

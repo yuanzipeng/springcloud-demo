@@ -4,6 +4,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * @Author: yzp
+ * @Date: 2020-6-4 10:59
+ * @description
+ */
 @Configuration
 public class RestTemplateCofig {
 
