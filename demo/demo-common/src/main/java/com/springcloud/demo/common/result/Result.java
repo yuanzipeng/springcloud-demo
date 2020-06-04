@@ -27,7 +27,7 @@ public class Result<T> implements Serializable {
     /**
      * 相关数据
      */
-    private Object data;
+    private T data;
 
     /**
      * 时间戳
@@ -56,11 +56,11 @@ public class Result<T> implements Serializable {
         return this;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public Result setData(Object data) {
+    public Result setData(T data) {
         this.data = data;
         return this;
     }

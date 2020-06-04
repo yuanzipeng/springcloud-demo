@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 /**
  * @Author: yzp
  * @Date: 2020-6-4 10:59
@@ -23,7 +25,7 @@ public interface UseFeign {
     String tests(@RequestParam("msg") String msg);
 
     @GetMapping("getUserList")
-    Result<User> getUserList();
+    Result<List<User>> getUserList();
 
     @PostMapping("getUser")
     Result<User> getUser(@RequestBody User user);

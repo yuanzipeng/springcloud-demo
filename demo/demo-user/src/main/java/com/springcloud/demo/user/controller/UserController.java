@@ -55,9 +55,9 @@ public class UserController {
 
     @GetMapping("getUserList")
     @ApiOperation(value = "获取用户信息列表")
-    public Result<User> getUserList() {
-        List<User> user = userMapper.selectList(null);
-        return Result.success(user);
+    public Result<List<User>> getUserList() {
+        List<User> userList = userMapper.selectList(null);
+        return Result.success(userList);
     }
 
     @PostMapping("getUser")

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -66,10 +67,12 @@ public class ConsumerController {
 
     @GetMapping("getUserList")
     @ApiOperation(value = "获取用户信息列表")
-    public Result<User> getUserList(){
+    public Result<List<User>> getUserList(){
         log.info("getUserList获取用户信息列表");
         //feign调用演示
-        Result<User> result = useFeign.getUserList();
+        Result<List<User>> result = useFeign.getUserList();
+        List<User> users= result.getData();
+        log.info("getUserList获取用户信息列表"+users);
         return result;
     }
 
