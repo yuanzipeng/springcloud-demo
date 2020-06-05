@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: yzp
  * @Date: 2020-6-4 10:59
  * @description
  */
-@FeignClient(name = "userFeign",url = "http://localhost:8100/user/user")
+@FeignClient(name = "demo-user",path = "/user/user")
 public interface UseFeign {
 
     @GetMapping("test")
@@ -25,8 +25,8 @@ public interface UseFeign {
     String tests(@RequestParam("msg") String msg);
 
     @GetMapping("getUserList")
-    Result<List<User>> getUserList();
+    Result<Map<String,Object>> getUserList();
 
     @PostMapping("getUser")
-    Result<User> getUser(@RequestBody User user);
+    Result<Map<String,Object>> getUser(@RequestBody User user);
 }

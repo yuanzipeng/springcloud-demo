@@ -1,11 +1,3 @@
-server:
-    port: 8100
-    servlet:
-        context-path: /user
-    tomcat:
-      uri-encoding: UTF-8
-      basedir: /tmp/tomcat
-      connection-timeout: 60000
 
 spring:
   application:

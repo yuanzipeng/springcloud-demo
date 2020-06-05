@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
-import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: yzp
@@ -27,6 +27,9 @@ public class ConsumerController {
 
     @Resource
     private RestTemplate restTemplate;
+
+    @Resource
+    private RestTemplate loadBalanced;
 
     @Resource
     private UseFeign useFeign;
@@ -52,6 +55,15 @@ public class ConsumerController {
         return result;
     }
 
+    @GetMapping("loadBalanced")
+    @ApiOperation(value = "Ribbon负载均衡测试")
+    public String loadBalanced(String msg){
+        String uri = "/user/user/test?msg="+msg;
+        String url = "http://demo-user"+uri;
+        String result = loadBalanced.getForObject(url,String.class);
+        return result;
+    }
+
     @GetMapping("feign")
     @ApiOperation(value = "feign测试接口")
     public Result<String> feign(String msg){
@@ -72,21 +84,21 @@ public class ConsumerController {
 
     @GetMapping("getUserList")
     @ApiOperation(value = "获取用户信息列表")
-    public Result<List<User>> getUserList(){
+    public Result<Map<String,Object>> getUserList(){
         log.info("getUserList获取用户信息列表");
         //feign调用演示
-        Result<List<User>> result = useFeign.getUserList();
-        List<User> users= result.getData();
+        Result<Map<String,Object>> result = useFeign.getUserList();
+        Map<String,Object> users= result.getData();
         log.info("getUserList获取用户信息列表:{}",users);
         return result;
     }
 
     @PostMapping("getUser")
     @ApiOperation(value = "获取用户信息")
-    public Result<User> getUser(@RequestBody User user){
+    public Result<Map<String,Object>> getUser(@RequestBody User user){
         log.info("getUser获取用户信息"+user);
         //feign调用演示
-        Result<User> result = useFeign.getUser(user);
+        Result<Map<String,Object>> result = useFeign.getUser(user);
         return result;
     }
 }

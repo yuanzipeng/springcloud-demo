@@ -1,6 +1,6 @@
 
 server:
-  port: 8100
+  port: 8300
   servlet:
     context-path: /user
   tomcat:

@@ -22,6 +22,11 @@ spring:
     filters: log4j,wall,mergeStat
     driverClassName: com.mysql.jdbc.Driver
 
+## ribbon配置服务名称 Service-ID
+#demo-user:
+#  ribbon:
+#    # 属性配置方式【推荐】配置文件配置负载均衡算法-我这里使用的是自定义的Ribbon的负载均衡算法，默认
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 
 logging:
   config: classpath:logback.xml

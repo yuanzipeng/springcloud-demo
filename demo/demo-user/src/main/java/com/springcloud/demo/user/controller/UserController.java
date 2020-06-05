@@ -6,6 +6,7 @@ import com.springcloud.demo.user.entity.User;
 import com.springcloud.demo.user.mapper.UserMapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -26,11 +27,15 @@ public class UserController {
     @Resource
     private UserMapper userMapper;
 
+    @Value("${server.port}")
+    private int port;
+
 
     @GetMapping("test")
     @ApiOperation(value = "Result测试接口")
     public Result<String> test(String msg) {
-        return Result.success(msg);
+
+        return Result.success(msg+port);
     }
 
     @GetMapping("tests")
@@ -55,16 +60,22 @@ public class UserController {
 
     @GetMapping("getUserList")
     @ApiOperation(value = "获取用户信息列表")
-    public Result<List<User>> getUserList() {
+    public Result<Map<String,Object>> getUserList() {
         List<User> userList = userMapper.selectList(null);
-        return Result.success(userList);
+        Map<String,Object> map = new HashMap<>();
+        map.put("port",port);
+        map.put("userList",userList);
+        return Result.success(map);
     }
 
     @PostMapping("getUser")
     @ApiOperation(value = "获取用户信息")
-    public Result<User> getUser(@RequestBody User user) {
+    public Result<Map<String,Object>> getUser(@RequestBody User user) {
         User user1 = userMapper.selectById(user.getUuid());
-        return Result.success(user1);
+        Map<String,Object> map = new HashMap<>();
+        map.put("port",port);
+        map.put("user1",user1);
+        return Result.success(map);
     }
 
 }
