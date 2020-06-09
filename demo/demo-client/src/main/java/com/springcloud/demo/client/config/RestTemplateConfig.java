@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
  * @description
  */
 @Configuration
-public class RestTemplateCofig {
+public class RestTemplateConfig {
 
     @Bean
     public RestTemplate restTemplate() {

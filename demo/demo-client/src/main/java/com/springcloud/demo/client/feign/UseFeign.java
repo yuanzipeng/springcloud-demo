@@ -1,5 +1,6 @@
 package com.springcloud.demo.client.feign;
 
+import com.springcloud.demo.client.config.FeignFallBackFactory;
 import com.springcloud.demo.client.entity.User;
 import com.springcloud.demo.common.result.Result;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -15,7 +16,11 @@ import java.util.Map;
  * @Date: 2020-6-4 10:59
  * @description
  */
-@FeignClient(name = "demo-user",path = "/user/user")
+@FeignClient(name = "demo-user",
+        path = "/user/user",
+        //fallback = FallBackImpl.class
+        fallbackFactory = FeignFallBackFactory.class
+)
 public interface UseFeign {
 
     @GetMapping("test")
