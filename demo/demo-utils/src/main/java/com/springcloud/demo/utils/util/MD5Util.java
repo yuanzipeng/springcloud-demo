@@ -1,4 +1,4 @@
-package com.springcloud.demo.common.utils;
+package com.springcloud.demo.utils.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

@@ -1,6 +1,6 @@
 package com.springcloud.demo.user.user;
 
-import com.springcloud.demo.user.entity.User;
+import com.springcloud.demo.api.user.entity.User;
 import com.springcloud.demo.user.mapper.UserMapper;
 import com.springcloud.demo.user.DemoUserApplicationTests;
 import org.junit.Test;

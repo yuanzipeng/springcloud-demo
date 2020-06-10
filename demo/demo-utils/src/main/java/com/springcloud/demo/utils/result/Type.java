@@ -1,4 +1,4 @@
-package com.springcloud.demo.common.result;
+package com.springcloud.demo.utils.result;
 
 /**
  * @Author: yzp

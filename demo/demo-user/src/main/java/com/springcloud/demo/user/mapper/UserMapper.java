@@ -1,7 +1,7 @@
 package com.springcloud.demo.user.mapper;
 
-import com.springcloud.demo.user.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.springcloud.demo.api.user.entity.User;
 
 /**
  * <p>

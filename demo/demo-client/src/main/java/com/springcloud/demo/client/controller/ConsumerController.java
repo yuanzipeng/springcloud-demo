@@ -1,8 +1,8 @@
 package com.springcloud.demo.client.controller;
 
-import com.springcloud.demo.client.entity.User;
+import com.springcloud.demo.api.user.entity.User;
 import com.springcloud.demo.client.feign.UseFeign;
-import com.springcloud.demo.common.result.Result;
+import com.springcloud.demo.utils.result.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

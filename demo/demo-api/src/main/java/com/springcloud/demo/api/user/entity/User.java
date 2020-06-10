@@ -1,7 +1,9 @@
-package com.springcloud.demo.client.entity;
+package com.springcloud.demo.api.user.entity;
+
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import com.springcloud.demo.utils.util.MD5Util;
 import lombok.Data;
 
 /**

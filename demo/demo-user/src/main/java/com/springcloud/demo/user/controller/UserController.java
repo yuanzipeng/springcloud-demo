@@ -1,9 +1,9 @@
 package com.springcloud.demo.user.controller;
 
-import com.springcloud.demo.common.result.Result;
+import com.springcloud.demo.api.user.entity.User;
 import com.springcloud.demo.common.utils.JwtTokenUtil;
-import com.springcloud.demo.user.entity.User;
 import com.springcloud.demo.user.mapper.UserMapper;
+import com.springcloud.demo.utils.result.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
