@@ -11,7 +11,7 @@
     <artifactId>demo-utils</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo-utils</name>
-    <description>Demo project for Spring Boot</description>
+    <description>工具类模块</description>
 
     <properties>
         <java.version>1.8</java.version>

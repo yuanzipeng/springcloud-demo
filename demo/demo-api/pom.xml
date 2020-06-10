@@ -8,11 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.springcloud.demo</groupId>
     <artifactId>demo-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo-api</name>
-    <description>Demo project for Spring Boot</description>
+    <description>通用Feign接口模块</description>
 
     <properties>
         <java.version>1.8</java.version>

@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>demo</name>
-    <description>springCloud demo</description>
+    <description>springCloud demo父工程</description>
 
     <modules>
         <module>demo-utils</module>

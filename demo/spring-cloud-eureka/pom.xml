@@ -11,7 +11,7 @@
     <artifactId>spring-cloud-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>eureka</name>
-    <description>注册服务模块eureka</description>
+    <description>服务注册模块eureka</description>
 
     <properties>
         <java.version>1.8</java.version>
