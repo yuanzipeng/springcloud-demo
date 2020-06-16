@@ -22,6 +22,7 @@
         <module>demo-user</module>
         <module>demo-client</module>
         <module>spring-cloud-eureka</module>
+        <module>spring-cloud-gateway</module>
     </modules>
 
     <properties>
