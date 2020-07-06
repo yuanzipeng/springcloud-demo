@@ -10,7 +10,7 @@ server:
 
 #MYSQL_HOST: 127.0.0.1
 mybatis-plus:
-  mapper-locations: classpath*:com/demo/mettingfilm/**/xml/*Mapper.xml
+  mapper-locations: classpath:mapper/*.xml
   global-config:
     #0:数据库ID自增   1:用户输入id  2:全局唯一id(IdWorker)  3:全局唯一ID(uuid)
     id-type: 0
@@ -25,6 +25,7 @@ mybatis-plus:
 
 spring:
   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://${MYSQL_HOST:47.107.97.4}:${MYSQL_PORT:3306}/${MYSQL_NAME:demo}?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
     username: ${MYSQL_USER:root}
     password: ${MYSQL_PASSWORD:236675}

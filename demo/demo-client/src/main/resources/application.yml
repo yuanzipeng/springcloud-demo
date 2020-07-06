@@ -1,7 +1,7 @@
 
 #MYSQL_HOST: 127.0.0.1
 mybatis-plus:
-  mapper-locations: classpath*:com/demo/mettingfilm/**/xml/*Mapper.xml
+  mapper-locations: classpath:mapper/*.xml
   global-config:
     #0:数据库ID自增   1:用户输入id  2:全局唯一id(IdWorker)  3:全局唯一ID(uuid)
     id-type: 0

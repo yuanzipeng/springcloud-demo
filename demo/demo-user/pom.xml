@@ -24,8 +24,8 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <!-- 资源引入 -->
+    <!--<build>
+        &lt;!&ndash; 资源引入 &ndash;&gt;
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -36,8 +36,9 @@
                 <includes>
                     <include>**/*.xml</include>
                 </includes>
+                <filtering>false</filtering>
             </resource>
         </resources>
-    </build>
+    </build>-->
 
 </project>

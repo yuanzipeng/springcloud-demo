@@ -9,4 +9,8 @@
         <result column="user_pwd" property="userPwd" />
         <result column="user_phone" property="userPhone" />
     </resultMap>
+
+    <select id="queryList" resultMap="BaseResultMap">
+        SELECT UUID,user_phone,user_pwd,user_name FROM user
+    </select>
 </mapper>
